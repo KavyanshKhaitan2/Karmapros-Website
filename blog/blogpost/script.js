@@ -70,30 +70,11 @@ function logout() {
 }
 
 setTimeout(() => {
-  no_of_posts = blogposts.length;
-  console.log("No of BlogPosts is " + no_of_posts);
-  var finalContent = "";
-  
-  for (let i = 0; i < no_of_posts; i++) {
-    var content = "";
-    var halfPost = blogposts[i].blog_content.slice(0, 200) + "...";
-    content+=`<div style="cursor:pointer;" title="Click to Go To Blog Post" onclick='redirectToBlogPost(` + i + `)'>
-      <h1 style="font-size: 25px;">`+ blogposts[i].title +`</h1>
-      <p>`+halfPost+`</p>
-      <button>Read More...</button>
-      <br><br><br><br>
-    </div>
-    <hr>`
+  blogID = localStorage.getItem("currentBlog");
+  localStorage.removeItem("currentBlog");
+  title = blogposts[blogID].title;
+  content = blogposts[blogID].blog_content.replaceAll("\n", "<br>");
 
-
-    finalContent += content;
-  }
-
-  document.getElementById("posts").innerHTML = finalContent;
+  document.getElementById("blogTitle").innerHTML = title;
+  document.getElementById("postContent").innerHTML = content;
 }, 500);
-
-
-function redirectToBlogPost(blogID) {
-  localStorage.setItem("currentBlog", blogID);
-  window.location = "blogpost";
-}

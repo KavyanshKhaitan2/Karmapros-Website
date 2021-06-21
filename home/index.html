@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Karmapro</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav id="nav_desktop">
+    <a href="/">
+      <img src="/images/Photo.png" alt="Kavyansh Khaitan" style="
+            width: 8vh;
+            border-radius: 100px;
+            position: absolute;
+            left: 10px;
+          " title="Home" />
+    </a>
+    <b style="position: absolute; left: 10vh"><br />Karmapro's YouTube Channel</b>
+
+    <center>
+      <span>
+        <a href="../">home</a>
+        <a href="../about">about</a>
+        <a href="../blog">blog</a>
+      </span>
+
+      <span style="position: absolute; right: 0; padding-right: 10px">Hello, <span class="username"></span>!
+        <button id="logout" onclick="logout()">Logout</button></span>
+    </center>
+  </nav>
+  <nav id="nav_mobile">
+    <a href="/">
+      <img src="../images/Photo.png" alt="Karmapro" style="
+            width: 8vh;
+            border-radius: 100px;
+            position: absolute;
+            left: 10px;
+          " title="Home" />
+    </a>
+
+
+    <a href="javascript:mobile_nav_toggle()">
+      <img src="../hamburger-nav.png" alt="Refresh" width="50" style="position: absolute; right:0; top: 2.5vh">
+    </a>
+
+    
+  </nav>
+  <div id="mobile-popout" style="display: none;">
+    <ul>
+      <li>HEHE</li>
+    </ul>
+  </div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <div id="content" style="display:block;">
+    <center><span id="typewriter"></span><span id="cursor">|</span></center>
+  </div>
+</body>
+
+</html>
